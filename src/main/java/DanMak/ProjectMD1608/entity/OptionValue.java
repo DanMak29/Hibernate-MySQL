@@ -9,9 +9,11 @@ public class OptionValue {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String value;
+
     @ManyToOne
     @JoinColumn(name = "feature_id")
     private Feature feature;
+
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;

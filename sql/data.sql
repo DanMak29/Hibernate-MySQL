@@ -7,8 +7,7 @@ insert into features(category_id, category_option)
 values (1, 'ОЗУ'),
        (1, 'Процессор'),
        (2, 'Батарея'),
-       (2, 'Операционная система')
-;
+       (2, 'Операционная система');
 
 insert into option_value(product_id, feature_id, value)
 values (1, 1, '32 ГБ'),

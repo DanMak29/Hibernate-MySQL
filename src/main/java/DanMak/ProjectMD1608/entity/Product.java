@@ -9,12 +9,16 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
     private String name;
+
     private Long price;
-    @OneToMany(mappedBy = "product")
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<OptionValue> optionValueList;
 
     public Long getId() {
